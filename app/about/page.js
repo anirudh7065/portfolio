@@ -1,11 +1,12 @@
 import React from 'react'
+import Link from 'next/link';
 
 const page = () => {
   return (
     <main>
       <div className="edu my-10 mx-10">
         <div className="title text-2xl text-purple-600">Educational Journey:</div>
-        <div className="body">I hold a degree in BCA from HR Institute of Science and Technology, where I cultivated a deep understanding of Computer Application. My academic background serves as the foundation for my commitment to lifelong learning and staying at the forefront of industry trends. <span className='text-red-400'>My Marksheet :- </span><span>Click Here</span></div>
+        <div className="body">I hold a degree in BCA from HR Institute of Science and Technology, where I cultivated a deep understanding of Computer Application. My academic background serves as the foundation for my commitment to lifelong learning and staying at the forefront of industry trends. <span className='text-red-400'>My Marksheet :- </span><Link href={"./marksheet"}>Click Here</Link></div>
       </div>
       <div className="edu my-10 mx-10">
         <div className="title text-2xl text-purple-600">Mission and Values:</div>
