@@ -13,7 +13,7 @@ const page = () => {
         <div className='text-[70px] flex items-center justify-center gap-5 my-10'>
           <Image
           prefetch={true}
-          src={"/certi/img1.png"}
+          src={"./img1.png"}
           alt={"profile"}
           width={300}
           height={300}

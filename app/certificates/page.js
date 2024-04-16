@@ -11,7 +11,7 @@ const page = () => {
     <div className='flex flex-col items-center my-10'>
     <Image
     className='my-4 border-4 border-purple-500'
-    src={"/certi/soft.png"}
+    src={"./soft.png"}
     width={800}
     height={1200}
     alt='soft.png'
@@ -19,7 +19,7 @@ const page = () => {
     />
     <Image
     className='my-4 border-4 border-purple-500'
-    src={"/certi/css.png"}
+    src={"./css.png"}
     width={800}
     height={1200}
     alt='soft.png'
@@ -27,7 +27,7 @@ const page = () => {
     />
     <Image
     className='my-4 border-4 border-purple-500'
-    src={"/certi/cpp-info.png"}
+    src={"./cpp-info.png"}
     width={800}
     height={1200}
     alt='soft.png'
@@ -35,7 +35,7 @@ const page = () => {
     />
     <Image
     className='my-4 border-4 border-purple-500'
-    src={"/certi/html5.png"}
+    src={"./html5.png"}
     width={800}
     height={1200}
     alt='soft.png'
@@ -43,7 +43,7 @@ const page = () => {
     />
     <Image
     className='my-4 border-4 border-purple-500'
-    src={"/certi/tcs.png"}
+    src={"./tcs.png"}
     width={800}
     height={1200}
     alt='soft.png'
@@ -51,7 +51,7 @@ const page = () => {
     />
     <Image
     className='my-4 border-4 border-purple-500'
-    src={"/certi/postman-letsu.png"}
+    src={"./postman-letsu.png"}
     width={800}
     height={1200}
     alt='soft.png'
