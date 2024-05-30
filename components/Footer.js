@@ -14,7 +14,6 @@ const Footer = () => {
                         src={"./social/instagram.svg"}
                         width={25}
                         height={25}
-                        prefetch={true}
                         
                         />
                     </Link>
@@ -26,7 +25,6 @@ const Footer = () => {
                         src={"./social/whatsapp.svg"}
                         width={25}
                         height={25}
-                        prefetch={true}
                         
                         />
                     </Link>
@@ -38,7 +36,6 @@ const Footer = () => {
                         src={"./social/linkedin.svg"}
                         width={25}
                         height={25}
-                        prefetch={true}
                         
                         />
                     </Link>
@@ -50,7 +47,6 @@ const Footer = () => {
                         src={"./social/github.svg"}
                         width={25}
                         height={25}
-                        prefetch={true}
                         
                         />
                     </Link>
