@@ -17,6 +17,7 @@ const page = () => {
           alt={"profile"}
           width={300}
           height={300}
+          priority={true}
           />
           </div>
           <div className='md:text-left md:w-10/12 flex flex-col'>

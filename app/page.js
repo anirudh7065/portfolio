@@ -17,8 +17,10 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
+            
             <span>
               <Image
                 className=''
@@ -26,6 +28,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -35,6 +38,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -44,6 +48,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -53,6 +58,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -62,6 +68,7 @@ export default function Home() {
                 width={60}
                 height={60}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -71,6 +78,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -80,6 +88,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -89,6 +98,7 @@ export default function Home() {
                 width={60}
                 height={50}
                 alt='soft.png'
+                priority={true}
               />
             </span>
             <span>
@@ -98,6 +108,7 @@ export default function Home() {
                 width={30}
                 height={30}
                 alt='soft.png'
+                priority={true}
               />
             </span>
           </span>
