@@ -14,7 +14,7 @@ const page = () => {
         <div className='md:text-[70px] leading-loose text-xl flex md:flex-row flex-col items-center justify-center gap-5 my-10'>
           <div className='md:w-1/4 w-1/2'>
           <Image
-          src={'/img1.png'}
+          src={'./img1.png'}
           alt='profile image'
           width={'280'}
           height={'280'}

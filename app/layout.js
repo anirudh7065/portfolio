@@ -10,7 +10,7 @@ export const metadata = {
   title: "Home",
   description: "Home page of my portfolio",
   icons:{
-    icon:"/fav.png",
+    icon:"./fav.png",
   }
 };
 
