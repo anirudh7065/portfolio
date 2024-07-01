@@ -1,5 +1,7 @@
 import React from 'react'
 import Image from 'next/image'
+import Loader from '@/components/Loader';
+import ImageComponent from '@/components/ImageComponent';
 
 export const metadata = {
   title: "Certificate",
@@ -7,57 +9,16 @@ export const metadata = {
 };
 
 const page = () => {
+
   return (
     <div className='flex flex-col items-center my-10 w-auto md:mx-0 mx-3'>
-    <Image
-    className='my-4 border-2 md:border-4 border-purple-500'
-    src={"./soft.png"}
-    width={800}
-    height={1200}
-    alt='soft.png'
-    priority={true}
-    />
-    <Image
-    className='my-4 border-2 md:border-4 border-purple-500'
-    src={"./css.png"}
-    width={800}
-    height={1200}
-    alt='soft.png'
-    priority={true}
-    />
-    <Image
-    className='my-4 border-2 md:border-4 border-purple-500'
-    src={"./cpp-info.png"}
-    width={800}
-    height={1200}
-    alt='soft.png'
-    priority={true}
-    />
-    <Image
-    className='my-4 border-2 md:border-4 border-purple-500'
-    src={"./html5.png"}
-    width={800}
-    height={1200}
-    alt='soft.png'
-    priority={true}
-    />
-    <Image
-    className='my-4 border-2 md:border-4 border-purple-500'
-    src={"./tcs.png"}
-    width={800}
-    height={1200}
-    alt='soft.png'
-    priority={true}
-    />
-    <Image
-    className='my-4 border-2 md:border-4 border-purple-500'
-    src={"./postman-letsu.png"}
-    width={800}
-    height={1200}
-    alt='soft.png'
-    priority={true}
-    />
-    
+      <ImageComponent src={ "/soft-min.png" } alt={'Image of softpro certificate'}/>
+      <ImageComponent src={ "/css.png" } alt={'Image of css certificate'}/>
+      <ImageComponent src={ "/cpp-info.png" } alt={'Image of cpp certificate'}/>
+      <ImageComponent src={ "/html5.png" } alt={'Image of html5 certificate'}/>
+      <ImageComponent src={ "/tcs.png" } alt={'Image of tcs certificate'}/>
+      <ImageComponent src={ "/postman-letsu.png" } alt={'Image of postman certificate'}/>
+
     </div>
   )
 }

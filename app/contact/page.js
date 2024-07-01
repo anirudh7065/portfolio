@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import ImageComponent from '@/components/ImageComponent';
 
 export const metadata = {
   title: "Contact",
@@ -13,11 +14,11 @@ const page = () => {
         <div className='md:text-[70px] leading-loose text-xl flex md:flex-row flex-col items-center justify-center gap-5 my-10'>
           <div className='md:w-1/4 w-1/2'>
           <Image
-          src={"./img1.png"}
-          alt={"profile"}
-          width={300}
-          height={300}
-          priority={true}
+          src={'./img1.png'}
+          alt='profile image'
+          width={'170'}
+          height={'170'}
+          className='w-full h-full'
           />
           </div>
           <div className='md:text-left md:w-10/12 flex flex-col'>

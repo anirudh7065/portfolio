@@ -53,7 +53,7 @@ export default function Home() {
             </span>
             <span>
               <Image
-                className='bg-white rounded-full'
+                className=' rounded-full invert-[10]'
                 src={"./langs/next-js.svg"}
                 width={30}
                 height={30}
