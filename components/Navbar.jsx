@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 const Navbar = () => {
   return (
-    <nav className='flex md:flex-row flex-col justify-between md:h-20 items-center md:gap-2 mx-8 w-auto'>
+    <nav className='flex md:flex-row flex-col justify-between md:h-20 items-center md:gap-2 mx-8 w-auto select-none'>
       <div className='flex justify-center items-center'>
         <Image
           className='bg-cover'
