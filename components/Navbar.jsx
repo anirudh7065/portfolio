@@ -6,6 +6,7 @@ const Navbar = () => {
   return (
     <nav className='flex md:flex-row flex-col justify-between md:h-20 items-center md:gap-2 mx-8 w-auto select-none'>
       <div className='flex justify-center items-center'>
+        <Link href={"./"} >
         <Image
           className='bg-cover'
           src="./logo.svg"
@@ -13,6 +14,7 @@ const Navbar = () => {
           width={91}
           alt='logo.png'
         />
+          </Link>
       </div>
       <div className=''>
         <ul className='flex gap-1 md:gap-4'>
