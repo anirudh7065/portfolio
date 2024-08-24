@@ -18,7 +18,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      <body className={cn('bg-black text-white',inter.className)}>
+      <body className={cn('bg-black text-white select-none',inter.className)}>
       <Navbar/>
         {children}
         <Footer/>
