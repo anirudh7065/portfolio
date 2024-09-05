@@ -11,48 +11,47 @@ const ProjectCard = ({ imgUrl, title, subtitle, desc, live, stack, sources }) =>
     const { toast } = useToast()
     const notifySource = () => toast({
         title: "Source is not available"
-      })
+    })
     const notifyLive = () => toast({
         title: "Website is not live"
-      })
+    })
     return (
-        <section className='my-4 mx-4 border-[1px] border-blue-900' key={ title }>
-                <div className='bg-purple-900 py-2 text-center '>
-                    <div className='text-2xl font-extrabold '>
-                        { title }
-                    </div>
-                    <div className='text-sm font-bold'>
-                        { subtitle }
-                    </div>
+        <div className="card border-[1px] border-purple-500 h-[70vh] w-[90%] md:w-[80%] mb-4 grid grid-cols-1 grid-rows-8 ">
+            <div className="top w-full row-span-1  bg-purple-900 content-center">
+                <div className="title h-1/3 my-1 text-2xl font-extrabold text-center">{title}</div>
+                <div className="sub h-1/3 text-lg font-bold text-center">{subtitle}</div>
+            </div>
+            <Image
+                className='w-full row-span-3'
+                src={imgUrl}
+                alt={`image of ${title} project`}
+                width={500}
+                height={500}
+            />
+            <div className="content leading-7 row-span-3">
+                <div className="desc h-1/2 mx-2 my-2 text-sm md:text-lg">{desc }</div>
+                <div className="stack py-2 flex flex-wrap mx-2 text-sm md:text-lg content-center">
+                    Stack :-
+                    {stack.map((item,index) => {
+                        return<div key={index} className=" mx-2 my-1 bg-yellow-300 text-black px-2 rounded-full">
+                            {item}
+                        </div>
+                    })}
                 </div>
-                <Image
-                    src={ imgUrl }
-                    alt={ title }
-                    width={ 400 }
-                    height={ 350 }
-                    className='w-full'
-                />
-                <div className='my-2 p-2 font-medium text-lg'>
-                    { desc }
-                </div>
-                <div className='my-2 p-2'>
-                    <div className='w-full flex flex-wrap items-center'>
-                        <span className='text-xl font-extrabold'>Stack : -</span>
-                        { stack.map((item) => {
-                            return <div className='bg-purple-500 border-2 border-black rounded-full my-1 mx-1 p-2 font-normal ' key={item}>{ item }</div>
-                        }) }
-                    </div>
-                </div>
-                <div className='p-2 flex justify-between relative bottom-0'>
-                    <div className='px-2 py-1 bg-blue-800 font-normal rounded-lg '>
-                    {!!live && <Link href={ live } target='_blank'>Live</Link> || <Link href='' onClick={notifyLive} >Live</Link>} 
-
-                    </div>
-                    <div className='px-2 py-1 bg-blue-800 font-normal rounded-lg'>
-                        {!!sources && <Link href={ sources } target='_blank'>Source</Link> || <Link href='' onClick={notifySource}>Source</Link>} 
-                    </div>
-                </div>
-        </section>
+            </div>
+            <div className="row-span-1 btns flex justify-between items-end mx-2">
+                <button className="live bg-blue-600 rounded-xl px-2 my-2">
+                    <Link href={live}>
+                        Live
+                    </Link>
+                </button>
+                <button className="source bg-blue-600 rounded-xl px-2 my-2">
+                    <Link href={sources}>
+                        Source
+                    </Link>
+                </button>
+            </div>
+        </div>
     )
 }
 

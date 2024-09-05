@@ -1,18 +1,22 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import MobileNav from './MobileNav'
 
 const Navbar = () => {
   return (
-    <nav className='flex md:flex-row flex-col justify-between md:h-20 items-center md:gap-2 mx-8 w-auto select-none'>
+    <>
+    <nav className='md:flex md:flex-row justify-between md:h-20 items-center md:gap-2 mx-8 select-none hidden '>
       <div className='flex justify-center items-center'>
+        <Link href={"./"} >
         <Image
           className='bg-cover'
-          src="./logo.svg"
-          height={91}
-          width={91}
+          src="./icons/logo.svg"
+          height={35}
+          width={35}
           alt='logo.png'
-        />
+          />
+          </Link>
       </div>
       <div className=''>
         <ul className='flex gap-1 md:gap-4'>
@@ -23,7 +27,9 @@ const Navbar = () => {
           <li className='hover:bg-gray-500 hover:bg-opacity-50 p-2 rounded-full'><Link href={"./contact"} >Contact</Link></li>
         </ul>
       </div>
-    </nav>
+      </nav>
+      <MobileNav/>
+    </>
   )
 }
 

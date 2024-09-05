@@ -9,8 +9,8 @@ import { cn } from "@/lib/utils";
 export const metadata = {
   title: "Home",
   description: "Home page of my portfolio",
-  icons:{
-    icon:"./fav.png",
+  icons: {
+    icon: "./fav.png",
   }
 };
 
@@ -18,12 +18,12 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
 
-      <body className={cn('bg-black text-white select-none',inter.className)}>
-      <Navbar/>
+      <body className={cn('bg-black text-white select-none', inter.className)}>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
         <Toaster />
-        </body>
+      </body>
     </html>
   );
 }
