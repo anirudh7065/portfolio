@@ -1,4 +1,5 @@
 import LangLogo from "@/components/LangLogo";
+import { langs } from "@/constants/constant";
 
 export default function Home() {
   return (
@@ -9,16 +10,13 @@ export default function Home() {
         <div className="flex md:flex-row flex-col justify-center items-center my-10  md:my-10 md:gap-3 gap-5">
           <span className="text-lg md:text-xl">Technologies Known :-</span>
           <span className="grid grid-cols-3 grid-rows-3 md:flex gap-4 items-center justify-center  ">
-            <LangLogo url={"./langs/Js.svg"} />
-            <LangLogo url={"./langs/c.svg"} />
-            <LangLogo url={"./langs/c++.svg"} />
-            <LangLogo url={"./langs/mongodb-icon.svg"} />
-            <LangLogo classname=' rounded-full invert-[10]' url={"./langs/next-js.svg"} />
-            <LangLogo url={"./langs/nodejs.png"} />
-            <LangLogo url={"./langs/react.svg"} />
-            <LangLogo url={"./langs/python-icon.svg"} />
-            <LangLogo url={"./langs/expressjs.png"} />
-            <LangLogo url={"./langs/tailwindcss-icon.svg"} spanClassName="col-span-3 flex justify-center" />
+            {langs.map((item) => (
+                <LangLogo key={item.name} url={item.url}
+                  spanClassName={item.name === 'Tailwindcss' ? "col-span-3 flex justify-center" : ''}
+                  classname={item.name === 'Next.js'?'rounded-full invert-[10]':''}
+                />
+              )
+            )}
           </span>
         </div>
       </main>

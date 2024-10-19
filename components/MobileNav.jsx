@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import { navs } from '@/constants/constant';
 import { Sheet, SheetClose, SheetContent, SheetTrigger,SheetTitle, SheetDescription } from '@/components/ui/sheet';
 
 const MobileNav = () => {
@@ -21,52 +22,18 @@ const MobileNav = () => {
                     <SheetContent side="left" className="border-none bg-purple-700">
                         <SheetDescription/>
                         <section className=" flex h-full flex-col gap-6 pt-16 text-white">
-                            <SheetClose asChild>
+                            {navs.map((item) => (
+                                
+                                <SheetClose asChild key={item.name}>
                                 <Link
-                                    href="/"
+                                    href={'.' + item.url}
                                     className="text-2xl font-bold"
-                                >
-                                    Home
+                                    >
+                                    {item.name}
                                 </Link>
                             </SheetClose>
-                            <SheetClose asChild>
-
-                                <Link
-                                    href="/about"
-                                    className="text-2xl font-bold"
-                                >
-                                    About
-                                </Link>
-                            </SheetClose>
-                            <SheetClose asChild>
-
-                                <Link
-                                    href="/certificates"
-                                    className="text-2xl font-bold"
-                                >
-                                    Certificates
-                                </Link>
-                            </SheetClose>
-                            <SheetClose asChild>
-
-                                <Link
-                                    href="/projects"
-                                    className="text-2xl font-bold"
-                                >
-                                    Projects
-                                </Link>
-                            </SheetClose>
-                            <SheetClose asChild>
-
-                                <Link
-                                    href="/contact"
-                                    className="text-2xl font-bold"
-                                >
-                                    Contact
-                                </Link>
-                            </SheetClose>
+                                ))}
                         </section>
-                        {/* </div> */}
                     </SheetContent>
                 </Sheet>
             </section>
