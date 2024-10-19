@@ -1,5 +1,6 @@
 import ContactLinks from '@/components/ContactLinks'
 import Image from 'next/image'
+import { contacts } from '@/constants/constant';
 
 export const metadata = {
   title: "Contact",
@@ -24,10 +25,9 @@ const page = () => {
         </div>
       </div>
       <ul className='md:flex md:gap-14 grid grid-cols-4 grid-rows-1'>
-        <ContactLinks link={"https://linkedin.com/in/abhishek-valsan-7590a6224"} title={"LinkedIn"}/>
-        <ContactLinks link={"https://github.com/anirudh7065"} title={"Github"}/>
-        <ContactLinks link={"mailto:anirudhraj02@gmail.com?"} title={"Email"}/>
-        <ContactLinks link={"https://www.instagram.com/anni.raj.002/"} title={"Instagram"}/>
+        {contacts.map((item, index) => (
+          <ContactLinks key={index} link={item.url} title={item.name}/>
+        ))}
       </ul>
     </main>
   )

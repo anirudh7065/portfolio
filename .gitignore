@@ -36,3 +36,4 @@ package-lock.json
 *.tsbuildinfo
 next-env.d.ts
 package-lock.json
+app/marksheet/sample.js
