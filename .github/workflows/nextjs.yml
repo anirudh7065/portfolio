@@ -79,6 +79,11 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./out
+      - name: Use secret environment variable
+        env:
+          SECRET_KEY: ${{ secrets.NEXT_PUBLIC_API_URL }}
+        run: |
+          echo "Secret is $SECRET_KEY"
 
   # Deployment job
   deploy:
