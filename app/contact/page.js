@@ -18,6 +18,7 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
     formData.append("access_key", secret);
+    console.log(secret);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
