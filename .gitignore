@@ -28,6 +28,7 @@ yarn-error.log*
 # local env files
 .env*.local
 package-lock.json
+./env
 
 # vercel
 .vercel
@@ -37,3 +38,4 @@ package-lock.json
 next-env.d.ts
 package-lock.json
 app/marksheet/sample.js
+.env

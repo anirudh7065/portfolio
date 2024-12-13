@@ -9,6 +9,14 @@
   font-family: "Dancing Script", cursive;
   font-weight: 700;
 }
+.glassmorph{
+  background: rgba( 255, 255, 255, 0.25 );
+box-shadow: 0 8px 32px 0 rgba(84, 84, 84, 0.37);
+backdrop-filter: blur( 10px );
+-webkit-backdrop-filter: blur( 10px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+}
 @layer base {
   body{
     background: black;
