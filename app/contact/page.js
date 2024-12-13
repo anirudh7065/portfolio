@@ -10,15 +10,11 @@ const metadata = {
 
 const Contact = () => {
   const [result, setResult] = useState("");
-  const [secret, setSecret] = useState(null);
-  useEffect(()=>{
-    setSecret(process.env.NEXT_PUBLIC_API_URL);
-  }, []);
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    formData.append("access_key", secret);
-    console.log(secret);
+    formData.append("access_key", process.env.NEXT_PUBLIC_API_URL);
+    console.log(process.env.NEXT_PUBLIC_API_URL);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
