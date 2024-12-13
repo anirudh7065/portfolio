@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import "@/app/globals.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 
 const metadata = {
   title: "Contact",
@@ -10,10 +10,14 @@ const metadata = {
 
 const Contact = () => {
   const [result, setResult] = useState("");
+  const [secret, setSecret] = useState(null);
+  useEffect(()=>{
+    setSecret(process.env.NEXT_PUBLIC_API_URL);
+  }, []);
   async function handleSubmit(event) {
     event.preventDefault();
     const formData = new FormData(event.target);
-    formData.append("access_key", process.env.NEXT_PUBLIC_API_URL);
+    formData.append("access_key", secret);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
