@@ -1,7 +1,7 @@
 "use client";
 import Head from "next/head";
 import "@/app/globals.css";
-import { useState,useEffect } from "react";
+import { useState } from "react";
 
 const metadata = {
   title: "Contact",
@@ -14,7 +14,6 @@ const Contact = () => {
     event.preventDefault();
     const formData = new FormData(event.target);
     formData.append("access_key", process.env.NEXT_PUBLIC_API_URL);
-    console.log(process.env.NEXT_PUBLIC_API_URL);
 
     const object = Object.fromEntries(formData);
     const json = JSON.stringify(object);
