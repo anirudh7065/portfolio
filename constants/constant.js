@@ -138,7 +138,6 @@ export const projects = [
         subtitle: "Video Calling",
         desc: "It is a video calling app with lets you do instant meetings, schedule meetings,and record meeting and join meeting",
         live: "http://zolo.vercel.app",
-        sources: "",
         stack: ["Nextjs", "Tailwind", "Shadcn", "Stream video client", "Clerk Auth"],
     },
     {
@@ -147,7 +146,6 @@ export const projects = [
         title: "PassMan",
         subtitle: "Password Manager",
         desc: "It is a password storing application used to store your passwords, edit your password or delete your password",
-        live: "",
         sources: "https://github.com/anirudh7065/Password-Manager",
         stack: ["Vite", "Tailwind", "ReactJs", "Mongo DB", "NodeJs", "ExpressJS"],
     },

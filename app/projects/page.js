@@ -15,8 +15,8 @@ const page = () => {
             title={item.title}
             subtitle={item.subtitle}
             desc={item.desc}
-            live={item.live}
-            sources={item.sources}
+            live={item?.live || ""}
+            sources={item?.sources || ""}
             stack={item.stack}
           />
         ))}
