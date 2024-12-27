@@ -78,16 +78,6 @@ export const socials = [
         url: "https://linkedin.com/in/abhishek-valsan-7590a6224",
         icon:"./social/linkedin.svg"
     },
-    {
-        name: "Whatsapp",
-        url: "https://wa.me/917065958339",
-        icon:"./social/whatsapp.svg"
-    },
-    {
-        name: "Instagram",
-        url: "https://www.instagram.com/anni.raj.002/",
-        icon:"./social/instagram.svg"
-    },
 ]
 
 
