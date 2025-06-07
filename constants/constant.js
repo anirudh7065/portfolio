@@ -3,43 +3,43 @@ import { icons } from "lucide-react";
 export const langs = [
     {
         name: "Javascript",
-        url: "./langs/Js.svg",
+        url: "/langs/Js.svg",
     },
     {
         name: "C",
-        url: "./langs/c.svg",
+        url: "/langs/c.svg",
     },
     {
         name: "C++",
-        url: "./langs/c++.svg",
+        url: "/langs/c++.svg",
     },
     {
         name: "MongoDB",
-        url: "./langs/mongodb-icon.svg",
+        url: "/langs/mongodb-icon.svg",
     },
     {
         name: "Next.js",
-        url: "./langs/next-js.svg",
+        url: "/langs/next-js.svg",
     },
     {
         name: "Node.js",
-        url: "./langs/nodejs.png",
+        url: "/langs/nodejs.png",
     },
     {
         name: "React",
-        url: "./langs/react.svg",
+        url: "/langs/react.svg",
     },
     {
         name: "Python",
-        url: "./langs/python-icon.svg",
+        url: "/langs/python-icon.svg",
     },
     {
         name: "Express.js",
-        url: "./langs/expressjs.png",
+        url: "/langs/expressjs.png",
     },
     {
         name: "Tailwindcss",
-        url: "./langs/tailwindcss-icon.svg",
+        url: "/langs/tailwindcss-icon.svg",
     },
 ];
 
@@ -71,33 +71,33 @@ export const socials = [
     {
         name: "Github",
         url: "https://github.com/anirudh7065",
-        icon:"./social/github.svg"
+        icon:"/social/github.svg"
     },
     {
         name: "LinkedIn",
         url: "https://linkedin.com/in/abhishek-valsan-7590a6224",
-        icon:"./social/linkedin.svg"
+        icon:"/social/linkedin.svg"
     },
 ]
 
 
 export const certificates = [{
-    src: "./certificate/soft-min.png",
+    src: "/certificate/soft-min.png",
     alt: "Image of softpro certificate",
 }, {
-    src: "./certificate/css.png",
+    src: "/certificate/css.png",
     alt: "Image of css certificate",
 }, {
-    src: "./certificate/cpp-info.png",
+    src: "/certificate/cpp-info.png",
     alt: "Image of cpp certificate",
 }, {
-    src: "./certificate/html5.png",
+    src: "/certificate/html5.png",
     alt: "Image of html5 certificate",
 }, {
-    src: "./certificate/tcs.png",
+    src: "/certificate/tcs.png",
     alt: "Image of tcs certificate",
 }, {
-    src: "./certificate/postman-letsu.png",
+    src: "/certificate/postman-letsu.png",
     alt: "Image of postman certificate",
     }];
 
@@ -122,7 +122,7 @@ export const contacts = [
 
 export const projects = [
     {
-        src: "./projects/zolo.png",
+        src: "/projects/zolo.png",
         alt: "Image of zolo project",
         title: "ZOlo",
         subtitle: "Video Calling",
@@ -131,7 +131,7 @@ export const projects = [
         stack: ["Nextjs", "Tailwind", "Shadcn", "Stream video client", "Clerk Auth"],
     },
     {
-        src: "./projects/passman.png",
+        src: "/projects/passman.png",
         alt: "Image of passman project",
         title: "PassMan",
         subtitle: "Password Manager",
@@ -140,7 +140,7 @@ export const projects = [
         stack: ["Vite", "Tailwind", "ReactJs", "Mongo DB", "NodeJs", "ExpressJS"],
     },
     {
-        src: "./projects/portfolio.png",
+        src: "/projects/portfolio.png",
         alt: "Image of portfolio project",
         title: "AV",
         subtitle: "Portfolio Website",
