@@ -145,7 +145,7 @@ export const projects = [
         title: "AV",
         subtitle: "Portfolio Website",
         desc: "It is my portfolio website on which you are currently on this stores everything about me as a job aspirant",
-        live: "https://anirudh7065.github.io/portfolio/",
+        live: "/",
         sources: "https://github.com/anirudh7065/portfolio",
         stack: ['Nextjs', 'Tailwind'],
     }
