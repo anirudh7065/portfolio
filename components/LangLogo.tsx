@@ -6,7 +6,7 @@ const LangLogo = ({ url, classname, spanClassName }) => {
     return (
       <span className={spanClassName}>
           <Image
-              className={classname?classname:''}
+              className={classname?classname:'w-10 h-10'}
               src={url}
               width={30}
               height={30}
