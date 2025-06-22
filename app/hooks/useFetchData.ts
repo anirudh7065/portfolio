@@ -1,19 +1,16 @@
+// app/hooks/usefetchdata 
 "use client";
 
 import useSWR from "swr";
+import { fetchData } from "@/lib/fetchdata";
 
 const fetcher = async <T>(url: string): Promise<T> => {
-  const res = await fetch(url);
-  if (!res.ok) {
-    const errorData = await res.json().catch(() => ({}));
-    throw new Error(errorData.error || `Fetch error: ${res.status}`);
-  }
-  return res.json();
+  const res: T  = await fetchData(url);
+  return res;
 };
 
 export function useFetchData<T>(endpoint: string) {
-  const base = process.env.NEXT_PUBLIC_BASE_URL;
-  const { data, error, isLoading } = useSWR<T>(base+endpoint, fetcher, {
+  const { data, error, isLoading } = useSWR<T>(endpoint, fetcher, {
     revalidateOnFocus: false,
     dedupingInterval: 86400,
   });

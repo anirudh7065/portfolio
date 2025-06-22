@@ -1,3 +1,4 @@
+// app/api/[id]/route.ts 
 import { NextResponse } from "next/server";
 import { supabaseServer } from "@/lib/supabase";
 import { PostgrestError } from "@supabase/supabase-js";
@@ -9,6 +10,11 @@ export async function GET(
   request: Request,
   context: { params: Params }
 ) {
+  const auth = request.headers.get("authorization");
+  if (auth !== process.env.API_AUTH_KEY) {
+    console.log(auth)
+    return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
+  }
   const params = await context.params;
   const { id } = params;
   const validIds = [
