@@ -22,7 +22,7 @@ const MobileNav = () => {
   const path = usePathname();
   return (
     <nav className="flex justify-between items-center p-4 md:hidden">
-      <section className="w-full max-w-[264px] md:hidden">
+      <section className="w-full max-w-66 md:hidden">
         <Sheet>
           <SheetTrigger asChild>
             <Image
@@ -36,18 +36,15 @@ const MobileNav = () => {
 
           <SheetContent
             side="left"
-            className="border-none dark:bg-dark-1 bg-yellow-400"
+            className="border-none dark:bg-dark-1 bg-dark-2"
           >
             <SheetTitle className={""}>
               <figure className="w-full flex justify-center items-center mt-4 mb-10 gap-2">
-                <Image
-                  src="./icons/logo.svg"
-                  width={100}
-                  height={100}
-                  alt="profile logo"
-                  className="cover items-center md:hidden w-[50px] h-[30px]"
-                />
-                <h2 className="text-3xl dark:text-white  font-bold ">
+                <div className="p-2 border-3 rounded-full dark:border-dark-2 border-dark-4">
+                    <span className="text-3xl text-white">A</span>
+                    <span className="text-3xl text-white">V</span>
+                </div>
+                <h2 className="text-3xl text-white  font-bold ">
                   Porfolio
                 </h2>
               </figure>
@@ -58,15 +55,15 @@ const MobileNav = () => {
                 <SheetClose
                   asChild
                   key={item.name}
-                  className={`w-[70%] text-center p-2 rounded-full ${
+                  className={`w-[70%] text-center p-2  rounded-full ${
                     path === item.url
-                      ? "dark:bg-dark-2 bg-yellow-200  font-extrabold"
+                      ? "dark:bg-dark-2 bg-dark-4  font-extrabold"
                       : ""
                   }`}
                 >
                   <Link
                     href={"." + item.url}
-                    className={`text-xl cursor-pointer text-black dark:text-white font-semibold `}
+                    className={`text-xl cursor-pointer text-white font-semibold `}
                     key={item.name}
                   >
                     {item.name}
@@ -82,19 +79,20 @@ const MobileNav = () => {
                   View Resume
                 </Link>
               </SheetClose>
+              <div className="w-full flex justify-end px-4 absolute bottom-6">
+              <ThemeToggle />
+              </div>
             </section>
           </SheetContent>
         </Sheet>
       </section>
       <figure className="flex justify-center items-center gap-2 md:hidden">
-        <ThemeToggle />
-        <Image
-          src="./icons/logo.svg"
-          width={25}
-          height={25}
-          alt="profile logo"
-          className="cover items-center md:hidden "
-        />
+        <div className="px-2 py-1 border-3 rounded-full dark:border-dark-2 border-dark-2">
+          <Link href={"./"} className="">
+            <span className="text-sm dark:text-white text-dark-1 ">A</span>
+            <span className="text-sm dark:text-white  text-dark-2">V</span>
+          </Link>
+        </div>
       </figure>
     </nav>
   );

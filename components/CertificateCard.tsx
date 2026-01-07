@@ -20,7 +20,7 @@ const CertificateCard = ({ src, alt }) => {
           width={800}
           height={1200}
           priority={true}
-          className={`my-4 md:border-4 border-2 dark:border-[#00FFFF] border-black ${
+          className={`my-4 md:border-4 border-2 dark:border-dark-1 border-black ${
             loaded ? "opacity-100" : "opacity-0"
           }`}
         />

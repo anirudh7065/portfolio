@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import Link from "next/link";
 import Image from "next/image";
 import MobileNav from "./MobileNav";
@@ -15,36 +14,30 @@ type Navigation = {
 
 const Navbar = () => {
   const path = usePathname();
-    const { data: navs=[] } = useFetchData<Navigation[]>("/api/navigations");
+  const { data: navs = [] } = useFetchData<Navigation[]>("/api/navigations");
 
 
   return (
     <>
       <main
-        className="md:flex flex-row justify-between md:h-[100px] 
+        className="md:flex flex-row justify-between md:h-25
  items-center md:gap-2 mx-8 select-none hidden "
       >
-        <figure className="flex justify-center items-center">
-          <Link href={"./"}>
-            <Image
-              className="bg-cover"
-              src="./icons/logo.svg"
-              height={35}
-              width={35}
-              alt="logo.png"
-            />
+        <div className="p-2 border-3 rounded-full dark:border-dark-2 border-dark-2">
+          <Link href={"./"} className="">
+            <span className="text-2xl dark:text-white text-dark-1 ">A</span>
+            <span className="text-2xl dark:text-white  text-dark-2">V</span>
           </Link>
-        </figure>
+        </div>
         <nav className="">
           <ul className="flex gap-1 md:gap-4">
             {navs.map((item) => (
               <Link href={"." + item.url} key={item.name}>
                 <li
-                  className={`p-2 rounded-full ${
-                    path === item.url
-                      ? "dark:bg-dark-1 bg-yellow-400  font-semibold"
-                      : " hover:bg-yellow-400 dark:hover:bg-dark-1 hover:bg-opacity-50 "
-                  }`}
+                  className={`px-4 py-2 rounded-full ${path === item.url
+                      ? "dark:bg-dark-1 bg-dark-2  font-semibold text-white"
+                    : " hover:bg-[#ac5483cb] dark:hover:bg-[#ac5483] hover:bg-opacity-50 hover:text-white "
+                    }`}
                 >
                   {item.name}
                 </li>
@@ -56,7 +49,7 @@ const Navbar = () => {
           <Link
             href="/resume/resume_july.pdf"
             target="_blank"
-            className="bg-yellow-400 dark:bg-dark-1 hover:bg-opacity-80 font-semibold px-4 py-2 rounded-full dark:black-outline-text dark:border-[1px] border-black"
+            className="bg-dark-2 text-white dark:bg-dark-1 hover:bg-opacity-80 font-semibold px-4 py-2 rounded-full dark:black-outline-text dark:border-[1px] border-black"
           >
             View Resume
           </Link>

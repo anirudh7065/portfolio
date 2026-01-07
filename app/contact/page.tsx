@@ -1,6 +1,5 @@
 "use client";
 import Head from "next/head";
-import "@/app/globals.css";
 import { useState } from "react";
 import Image from "next/image";
 
@@ -77,14 +76,14 @@ const Contact = () => {
         <meta property="og:description" content={metadata.description} />
       </Head>
       <main
-        className={`text-center flex flex-col items-center justify-start gap-10 h-[cacl(100vh-130px] md:h-auto w-full pb-10`}
+        className={`text-center flex flex-col items-center justify-start gap-10 h-[cacl()100vh-130px] md:h-auto w-full pb-10`}
       >
         <h1 className="text-4xl font-bold text-center dark:text-[#FFF15C] py-6 dark:black-outline-text">
           Contact
         </h1>
         {result === "success" ? (
           <div
-            className={`flex flex-col items-center gap-5 glassmorph md:px-8 px-3 py-6 md:w-[600px] md:h-[400px] w-[90%] text-white justify-center`}
+            className={`flex flex-col items-center gap-5 glassmorph md:px-8 px-3 py-6 md:w-150 md:h-100 w-[90%] text-white justify-center`}
           >
             <Image
               src="./icons/tick1.svg"
@@ -107,14 +106,14 @@ const Contact = () => {
         ) : (
           <form
             onSubmit={handleClick}
-            className="flex flex-col items-center gap-5 text-black dark:bg-dark-1 bg-yellow-400 rounded-3xl md:px-8 px-3 py-6 md:w-[600px] h-auto w-[90%] border-2 dark:border-black"
+            className="flex flex-col items-center gap-5 text-black dark:bg-dark-1 bg-dark-2 rounded-3xl md:px-8 px-3 py-6 md:w-150 h-auto w-[90%] border-2 dark:border-black"
           >
             <input
               type="text"
               name="username"
               id="username"
               placeholder="Name"
-              className={`rounded-lg p-2 placeholder:text-slate-950 w-full dark:border-2  ${
+              className={`rounded-lg p-2 bg-[#ffffff58] placeholder:text-black w-full border-2  ${
                 errors.username
                   ? "border border-red-700 placeholder:text-red-500"
                   : "dark:border-black"
@@ -133,13 +132,13 @@ const Contact = () => {
               minLength={10}
               maxLength={10}
               placeholder="Mobile (optional)"
-              className={`rounded-lg p-2 placeholder:text-slate-950 w-full dark:border-2 dark:border-black `}
+              className={`rounded-lg p-2 bg-[#ffffff58] placeholder:text-black w-full border-2 dark:border-black `}
             />
             <input
               type="text"
               name="email"
               id="email"
-              className={`rounded-lg p-2 placeholder:text-slate-950 w-full dark:border-2  ${
+                className={`rounded-lg p-2 bg-[#ffffff58] placeholder:text-black  w-full border-2  ${
                 errors.email
                   ? "border border-red-700 placeholder:text-red-500"
                   : "dark:border-black"
@@ -155,7 +154,7 @@ const Contact = () => {
               name="message"
               id="message"
               placeholder="Subject"
-              className={`rounded-lg min-h-[100px] p-2 placeholder:text-slate-950 w-full dark:border-2  ${
+              className={`rounded-lg min-h-25 p-2 bg-[#ffffff58] resize-none  placeholder:text-black w-full border-2  ${
                 errors.message
                   ? "border border-red-700 placeholder:text-red-500"
                   : "dark:border-black"
@@ -169,7 +168,7 @@ const Contact = () => {
             {clicked === false ? (
               <button
                 type="submit"
-                className="text-white font-bold content-center bg-dark-3 w-20 rounded-full p-2 dark:black-outline-text"
+                className="text-white font-normal content-center bg-dark-0 w-20 rounded-full p-2 "
               >
                 Submit
               </button>

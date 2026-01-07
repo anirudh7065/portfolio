@@ -10,7 +10,7 @@ type Social = {
 const Footer = async() => {
   const socials = await fetchData<Social[]>("/api/socials");
   return (
-    <footer className="bg-yellow-400 dark:bg-dark-1 dark:text-white  gap-3 justify-center flex items-center w-full h-[30px] fixed bottom-0 z-0 select-none">
+    <footer className="bg-dark-2 dark:bg-dark-1 text-white  gap-3 justify-center flex items-center w-full h-[30px] fixed bottom-0 z-0 select-none">
       <span>Made By Abhishek valsan</span>
       <div className="social flex">
         {socials.map((item) => (
@@ -21,7 +21,7 @@ const Footer = async() => {
                 src={item.icon}
                 width={25}
                 height={25}
-                className="dark:invert"
+                className="invert"
               />
             </Link>
           </span>

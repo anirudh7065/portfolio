@@ -42,7 +42,7 @@ export async function GET(
   return NextResponse.json(data, {
     status: 200,
     headers: {
-      // Cache for 24 hours, allow stale while revalidating for 1 min
+      // Cache for 24 hours, allow stale while revalidating for 1 minute
       "Cache-Control": "public, max-age=86400, stale-while-revalidate=60",
       // Optional, for security best practices
       "X-Content-Type-Options": "nosniff",

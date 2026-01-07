@@ -18,7 +18,7 @@ const Projects = async() => {
       <h1 className="font-extrabold text-4xl mt-2 mb-2 text-center dark:text-[#FFF15C] ">
         Projects
       </h1>
-      <section className="grid grid-cols-1 md:grid-cols-2 grid-cols-gt-1024 lg:gap-10 gap-6 place-items-start justify-items-center w-[95%] mx-auto my-10 scroll-smooth ">
+      <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-10 gap-6 place-items-start justify-items-center w-[95%] mx-auto my-10 scroll-smooth ">
         {projects.map((item, index) => (
           <ProjectCard
             key={index}

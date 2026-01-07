@@ -25,7 +25,7 @@ export default async function RootLayout({ children }) {
     <html lang="en" className={isDark ? "dark" : ""}>
       <body
         className={cn(
-          "dark:bg-[#1e2120] dark:text-white text-black bg-white select-none h-screen ",
+          "select-none h-screen ",
           inter.className
         )}
       >
