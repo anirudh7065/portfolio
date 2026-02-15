@@ -47,7 +47,7 @@ const Navbar = () => {
         </nav>
         <div className="flex gap-6">
           <Link
-            href="/resume/resume_july.pdf"
+            href="/resume/resume.pdf"
             target="_blank"
             className="bg-dark-2 text-white dark:bg-dark-1 hover:bg-opacity-80 font-semibold px-4 py-2 rounded-full dark:black-outline-text dark:border-[1px] border-black"
           >
