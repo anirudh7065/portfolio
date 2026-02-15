@@ -72,7 +72,7 @@ const MobileNav = () => {
               ))}
               <SheetClose>
                 <Link
-                  href="/resume/resume_july.pdf"
+                  href="/resume/resume.pdf"
                   target="_blank"
                   className="bg-black hover:bg-opacity-80 p-2 rounded-full"
                 >
